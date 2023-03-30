@@ -11,7 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} text-gray`}>
-        <h1 className="text-pink-200">Hello World... Kapp</h1>
+        <h1 className="text-pink-200" data-testid="heading">
+          Hello World
+        </h1>
       </main>
     </>
   );
