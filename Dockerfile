@@ -6,7 +6,8 @@ COPY package.json yarn.lock ./
 
 RUN yarn install
 
-COPY next.config.js ./next.config.js 
+COPY . .
 
+RUN yarn build
 
-CMD ["yarn", "dev"]
+ENTRYPOINT ["yarn", "start"]
