@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import { SidebarNavigation } from "@/components/SidebarNavigation";
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} text-gray`}>
-        <h1 className="text-pink-200">Hello World... Kapp</h1>
+        <SidebarNavigation />
+        <h1 className="text-pink-200" data-testid="heading">
+          Hello World
+        </h1>
       </main>
     </>
   );
