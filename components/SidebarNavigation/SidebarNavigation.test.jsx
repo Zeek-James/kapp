@@ -34,9 +34,13 @@ describe("Sidebar component", () => {
 
     const menuLink = screen.getAllByRole("menu-item");
     // Assert that the "About" link is active
-    expect(menuLink[0]).toHaveClass("bg-gray-400");
+    expect(menuLink[0]).toHaveClass(
+      "px-2 py-3 flex items-center mt-1 rounded-md bg-slate-50"
+    );
 
     // Assert that the other links are not active
-    expect(menuLink[1]).not.toHaveClass("bg-gray-400");
+    expect(menuLink[1]).not.toHaveClass(
+      "px-2 py-3 flex items-center mt-1 rounded-md bg-slate-50"
+    );
   });
 });

@@ -25,20 +25,27 @@ export default function MenuItem({
 }: MenuLinkProps) {
   return (
     <li
-      className={`px-2 py-3 flex items-center mt-1 rounded-md ${
-        isActive ? "bg-gray-400" : "bg-transparent"
-      }`}
+      className={`px-2 py-3 flex items-center mt-1  rounded-md ${
+        isActive ? "bg-slate-50" : "bg-transparent"
+      } ${isCollapsed && "justify-center"} `}
       role="menu-item"
     >
       <Link href={href} passHref style={{ textDecoration: "none" }}>
-        <div className="flex items-center text-slate-300">
+        <div className="flex items-center  text-slate-300">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="mr-3 h-5 w-5 bg-slate-300 rounded-full"
+            className=" h-5 w-5 bg-slate-300 rounded-full "
             src={iconSrc}
             alt={`${text} icon`}
           />
-          {!isCollapsed && text}
+          <span
+            className={` 
+            ${isActive ? "text-gray-500" : "bg-transparent"}
+            ${!isCollapsed && "ml-3"}
+            `}
+          >
+            {!isCollapsed && text}
+          </span>
         </div>
       </Link>
     </li>

@@ -19,8 +19,8 @@ export function SidebarNavigation() {
 
   return (
     <nav
-      className={`bg-slate-800 py-4 px-4 flex flex-col  h-full ${
-        sidebarCollapsed ? "w-20" : "w-48"
+      className={`bg-slate-800 py-4 px-4 flex flex-col  h-full  transition-all duration-300 ${
+        sidebarCollapsed ? "w-20" : "w-56"
       }`}
     >
       <h1
