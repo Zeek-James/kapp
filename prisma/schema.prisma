@@ -13,5 +13,5 @@ datasource db {
 model Note {
   id    Int     @id @default(autoincrement())
   title String
-  body  String
+  content  String
 }
