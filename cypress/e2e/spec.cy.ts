@@ -5,10 +5,6 @@ describe("Note Taking App", () => {
     cy.visit("http://localhost:3000");
   });
 
-  it("passes", () => {
-    cy.get("h1").contains("Hello World");
-  });
-
   it("displays a layout with header, footer, and main components", () => {
     cy.get("header") // Find the header element
       .should("be.visible") // Ensure it's visible
